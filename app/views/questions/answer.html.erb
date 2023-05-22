@@ -1,0 +1,19 @@
+<div class = "m-4">
+  <div class="border-start border-5">
+    <p class = 'm-2' ><%= @question %></p>
+    <p class = 'm-2'><%= '- You' %></p>
+  </div>
+  <div class="border-start border-5 bg-warning p-2 text-dark bg-opacity-10 mt-5 mb-5">
+    <p>
+    <% if @question == 'I am going to work'%>
+      <%= 'Great!'%>
+    <% elsif @question.split("").last == '?' %>
+      <%= 'Silly question, get dressed and go to work!' %>
+    <% else %>
+      <%= "I don't care, get dressed and go to work!"%>
+    <% end %>
+    </p>
+    <p><%= '- Your coach' %></p>
+  </div>
+  <%= link_to "Ask another question", ask_path %>
+</div>
